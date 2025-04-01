@@ -1,0 +1,155 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    background-color: #000;
+    color: #ff0000;
+    font-family: 'Press Start 2P', cursive;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+#game-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: none;
+}
+
+canvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+#ui-container {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    right: 15px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.5vw;
+    pointer-events: none;
+    text-shadow: 2px 2px 0 #000, -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 3px 3px 8px rgba(255, 0, 0, 0.7);
+    z-index: 10;
+    color: #ff4444;
+}
+
+#score {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 10px 15px;
+    border: 2px solid #ff0000;
+    border-radius: 5px;
+    box-shadow: 0 0 10px #ff0000;
+}
+
+#message-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(100, 0, 0, 0.85);
+    color: #fff;
+    padding: 5vh 8vw;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 3vw;
+    display: none;
+    border: 4px solid #ff4444;
+    box-shadow: 0 0 30px rgba(255, 0, 0, 1);
+    z-index: 20;
+    text-shadow: 3px 3px 5px #000;
+}
+
+#message-box button {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1.8vw;
+    padding: 15px 30px;
+    margin-top: 30px;
+    cursor: pointer;
+    background-color: #cc0000;
+    color: #fff;
+    border: 3px solid #ff4444;
+    border-radius: 5px;
+    box-shadow: 0 6px #660000;
+    transition: all 0.1s ease;
+    text-shadow: 2px 2px 3px #000;
+}
+
+#message-box button:hover {
+    background-color: #ff0000;
+}
+
+#message-box button:active {
+    box-shadow: 0 2px #440000;
+    transform: translateY(4px);
+}
+
+#start-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: #111;
+    padding: 40px;
+    border-radius: 15px;
+    border: 5px solid #ff0000;
+    box-shadow: 0 0 25px #ff0000;
+}
+
+#start-screen h1 {
+    font-size: 4vw;
+    margin-bottom: 20px;
+    color: #ff0000;
+    text-shadow: 3px 3px 5px #000;
+}
+
+#start-screen h2 {
+    font-size: 2.5vw;
+    margin-bottom: 20px;
+    color: #ffaaaa;
+    text-shadow: 2px 2px 3px #000;
+}
+
+#start-screen p {
+    font-size: 1.5vw;
+    margin-bottom: 30px;
+    color: #ccc;
+}
+
+#start-button {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 2vw;
+    padding: 20px 40px;
+    cursor: pointer;
+    background-color: #cc0000;
+    color: #fff;
+    border: 3px solid #ff4444;
+    border-radius: 10px;
+    box-shadow: 0 8px #660000;
+    transition: all 0.1s ease;
+    text-shadow: 2px 2px 3px #000;
+}
+
+#start-button:hover {
+    background-color: #ff0000;
+}
+
+#start-button:active {
+    box-shadow: 0 3px #440000;
+    transform: translateY(5px);
+}
+
+@media (max-width: 768px) {
+    #ui-container { font-size: 2.5vw; }
+    #message-box { font-size: 5vw; }
+    #message-box button { font-size: 3vw; }
+    #start-screen h1 { font-size: 6vw; }
+    #start-screen h2 { font-size: 4vw; }
+    #start-screen p { font-size: 2.5vw; }
+    #start-button { font-size: 4vw; }
+}

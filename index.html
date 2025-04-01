@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Zombie Bus Runner</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text x='16' y='22' font-size='28' text-anchor='middle' dominant-baseline='middle'>🧟</text></svg>">
+    <!-- Link para a fonte externa -->
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <!-- Link para o arquivo CSS externo -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Tela Inicial -->
+    <div id="start-screen">
+        <h1>Zombie Bus Runner</h1>
+        <h2>EXTREMELY INSANE EDITION</h2>
+        <p>Use Setas/A/D para mover, Espaço para atirar.<br>Clique para iniciar a carnificina!</p>
+        <button id="start-button">START GAME</button>
+    </div>
+
+    <!-- Container Principal do Jogo -->
+    <div id="game-container">
+        <canvas id="gameCanvas"></canvas>
+        <!-- Interface do Usuário (Score) -->
+        <div id="ui-container">
+            <div id="score">Score: 0</div>
+        </div>
+        <!-- Caixa de Mensagem (Game Over/Restart) -->
+        <div id="message-box">
+            <p id="message-text">Game Over!</p>
+            <button id="restart-button">Restart</button>
+        </div>
+    </div>
+
+    <!-- Script da biblioteca Three.js (via CDN) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <!-- Script do jogo (externo) -->
+    <script src="script.js"></script>
+
+</body>
+</html>
