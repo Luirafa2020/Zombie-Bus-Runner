@@ -16,6 +16,8 @@ Esse é um jogo é onde você encontrará zumbis para combate-los e ganhar ponto
 **Update 1(Agora tem limite de tiros, e você tem que olhar sua munição):**
 ![image](https://github.com/user-attachments/assets/53a85c0e-ae1e-46e2-9611-ccecfe27c266)
 
+A munição aparece ao zerar as suas balas, depois de 7 segundos aparecerá uma caixa de munição, se você não conseguir pegar a caixa de munição aparecerá outra em 4 segundos, e fica assim até você pegar e reiniciar o ciclo tudo de novo, se divirta, ele fica mais rápido de acordo com que o tempo vai passando
+
 Link do jogo: https://luirafa2020.github.io/Zombie-Bus-Runner/
 
 ---------Feito com a ajuda do Gemini 2.5 Pro---------
