@@ -16,7 +16,7 @@ body {
     left: 0;
     width: 100vw;
     height: 100vh;
-    display: none;
+    display: none; /* Começa escondido */
 }
 
 canvas {
@@ -31,20 +31,26 @@ canvas {
     left: 15px;
     right: 15px;
     display: flex;
-    justify-content: space-between;
-    font-size: 1.5vw;
+    justify-content: space-between; /* Coloca score na esquerda, ammo na direita */
+    font-size: 1.5vw; /* Tamanho base relativo à largura */
     pointer-events: none;
     text-shadow: 2px 2px 0 #000, -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 3px 3px 8px rgba(255, 0, 0, 0.7);
     z-index: 10;
-    color: #ff4444;
+    color: #ff4444; /* Cor vermelha principal da UI */
 }
 
-#score {
+/* Estilo comum para os itens da UI */
+#score, #ammo-count {
     background-color: rgba(0, 0, 0, 0.6);
     padding: 10px 15px;
     border: 2px solid #ff0000;
     border-radius: 5px;
     box-shadow: 0 0 10px #ff0000;
+    /* Garante que não cresçam demais em telas largas */
+    max-width: 45%;
+    white-space: nowrap; /* Evita quebra de linha */
+    overflow: hidden; /* Esconde texto que transborde */
+    text-overflow: ellipsis; /* Adiciona "..." se transbordar */
 }
 
 #message-box {
@@ -57,17 +63,19 @@ canvas {
     padding: 5vh 8vw;
     border-radius: 10px;
     text-align: center;
-    font-size: 3vw;
-    display: none;
+    font-size: 3vw; /* Tamanho relativo à largura */
+    display: none; /* Começa escondido */
     border: 4px solid #ff4444;
     box-shadow: 0 0 30px rgba(255, 0, 0, 1);
     z-index: 20;
     text-shadow: 3px 3px 5px #000;
+    width: 70%; /* Limita a largura máxima da caixa */
+    max-width: 600px; /* Limite máximo absoluto */
 }
 
 #message-box button {
     font-family: 'Press Start 2P', cursive;
-    font-size: 1.8vw;
+    font-size: 1.8vw; /* Tamanho relativo */
     padding: 15px 30px;
     margin-top: 30px;
     cursor: pointer;
@@ -90,7 +98,7 @@ canvas {
 }
 
 #start-screen {
-    display: flex;
+    display: flex; /* Flex ativado por padrão */
     flex-direction: column;
     align-items: center;
     text-align: center;
@@ -99,31 +107,34 @@ canvas {
     border-radius: 15px;
     border: 5px solid #ff0000;
     box-shadow: 0 0 25px #ff0000;
+    width: 80%; /* Limita a largura em telas maiores */
+    max-width: 700px; /* Limite absoluto */
 }
 
 #start-screen h1 {
-    font-size: 4vw;
+    font-size: 4vw; /* Tamanho relativo */
     margin-bottom: 20px;
     color: #ff0000;
     text-shadow: 3px 3px 5px #000;
 }
 
 #start-screen h2 {
-    font-size: 2.5vw;
+    font-size: 2.5vw; /* Tamanho relativo */
     margin-bottom: 20px;
     color: #ffaaaa;
     text-shadow: 2px 2px 3px #000;
 }
 
 #start-screen p {
-    font-size: 1.5vw;
+    font-size: 1.5vw; /* Tamanho relativo */
     margin-bottom: 30px;
     color: #ccc;
+    line-height: 1.6; /* Melhora legibilidade */
 }
 
 #start-button {
     font-family: 'Press Start 2P', cursive;
-    font-size: 2vw;
+    font-size: 2vw; /* Tamanho relativo */
     padding: 20px 40px;
     cursor: pointer;
     background-color: #cc0000;
@@ -144,12 +155,36 @@ canvas {
     transform: translateY(5px);
 }
 
+/* Media Queries para ajustar tamanhos em telas menores */
 @media (max-width: 768px) {
-    #ui-container { font-size: 2.5vw; }
-    #message-box { font-size: 5vw; }
-    #message-box button { font-size: 3vw; }
+    #ui-container { font-size: 2.5vw; } /* Aumenta um pouco */
+    #message-box { font-size: 5vw; padding: 4vh 6vw; } /* Ajusta padding/fonte */
+    #message-box button { font-size: 3vw; padding: 12px 25px; }
+    #start-screen { width: 90%; padding: 30px; } /* Ocupa mais espaço */
     #start-screen h1 { font-size: 6vw; }
     #start-screen h2 { font-size: 4vw; }
     #start-screen p { font-size: 2.5vw; }
-    #start-button { font-size: 4vw; }
+    #start-button { font-size: 4vw; padding: 15px 30px;}
+}
+
+@media (max-width: 480px) {
+    #ui-container { font-size: 3.5vw; top: 10px; left: 10px; right: 10px; } /* Ainda maior e mais perto das bordas */
+     #score, #ammo-count { padding: 8px 10px; }
+    #message-box { font-size: 6vw; padding: 3vh 5vw; }
+    #message-box button { font-size: 4vw; padding: 10px 20px; margin-top: 20px;}
+    #start-screen h1 { font-size: 7vw; }
+    #start-screen h2 { font-size: 5vw; }
+    #start-screen p { font-size: 3vw; }
+    #start-button { font-size: 5vw; padding: 12px 25px;}
+}
+
+/* Limita o tamanho máximo da fonte em telas muito grandes */
+@media (min-width: 1600px) {
+     #ui-container { font-size: 24px; } /* Tamanho fixo máximo */
+     #message-box { font-size: 48px; }
+     #message-box button { font-size: 28px; }
+     #start-screen h1 { font-size: 64px; }
+     #start-screen h2 { font-size: 40px; }
+     #start-screen p { font-size: 24px; }
+     #start-button { font-size: 32px; }
 }

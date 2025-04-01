@@ -16,16 +16,17 @@
     <div id="start-screen">
         <h1>Zombie Bus Runner</h1>
         <h2>EXTREMELY INSANE EDITION</h2>
-        <p>Use Setas/A/D para mover, Espaço para atirar.<br>Clique para iniciar a carnificina!</p>
+        <p>Use Setas/A/D para mover, Espaço para atirar.<br>Cuidado com a munição!<br>Clique para iniciar a carnificina!</p>
         <button id="start-button">START GAME</button>
     </div>
 
     <!-- Container Principal do Jogo -->
     <div id="game-container">
         <canvas id="gameCanvas"></canvas>
-        <!-- Interface do Usuário (Score) -->
+        <!-- Interface do Usuário (Score e Munição) -->
         <div id="ui-container">
             <div id="score">Score: 0</div>
+            <div id="ammo-count">Ammo: 10</div> <!-- Novo elemento para munição -->
         </div>
         <!-- Caixa de Mensagem (Game Over/Restart) -->
         <div id="message-box">
