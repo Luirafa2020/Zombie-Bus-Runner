@@ -13,7 +13,7 @@ Esse é um jogo é onde você encontrará zumbis para combate-los e ganhar ponto
 **Tela de Game Over:**
 ![image](https://github.com/user-attachments/assets/31c5bd1b-f132-4825-be08-f64f958fa918)
 
-**Update 1:**
+**Update 1(Agora tem limite de tiros, e você tem que olhar sua munição):**
 ![image](https://github.com/user-attachments/assets/53a85c0e-ae1e-46e2-9611-ccecfe27c266)
 
 Link do jogo: https://luirafa2020.github.io/Zombie-Bus-Runner/
