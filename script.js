@@ -7,12 +7,12 @@ let zombies = [];
 let projectiles = [];
 let particles = [];
 let score = 0;
-let gameSpeed = 0.15; // Velocidade inicial
+let gameSpeed = 0.35; // Velocidade inicial
 let maxGameSpeed = 0.7; // Aumentado um pouco o limite máximo
 // let speedIncreaseFactor = 0.00018; // Substituído pelas constantes abaixo
 
 // --- NOVAS CONSTANTES DE VELOCIDADE ---
-const baseGameSpeed = 0.15; // Velocidade inicial do jogo ao começar/resetar
+const baseGameSpeed = 0.35; // Velocidade inicial do jogo ao começar/resetar
 const baseSpeedIncreasePerSecond = 0.0015; // Aumento mínimo de velocidade por segundo de jogo
 const scoreSpeedFactorPerSecond = 0.000012; // Aumento adicional por ponto de score, por segundo
 const timeSpeedFactorPerSecondSquared = 0.00004; // Aceleração adicional da velocidade devido ao tempo decorrido (por segundo, por segundo)
