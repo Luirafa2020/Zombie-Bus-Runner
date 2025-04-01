@@ -14,3 +14,5 @@ Esse é um jogo é onde você encontrará zumbis para combate-los e ganhar ponto
 ![image](https://github.com/user-attachments/assets/31c5bd1b-f132-4825-be08-f64f958fa918)
 
 Link do jogo: https://luirafa2020.github.io/Zombie-Bus-Runner/
+
+---------Feito com a ajuda do Gemini 2.5 Pro---------
